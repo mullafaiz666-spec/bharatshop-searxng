@@ -1,52 +1,22 @@
-use_default_settings:
-  engines:
-    keep_only:
-      - startpage images
-      - youtube
+use_default_settings: true
 
 general:
   debug: false
-  instance_name: "BharatShop Image Search"
-  enable_metrics: false
+  instance_name: "BharatShop Search"
 
 search:
   safe_search: 1
+  autocomplete: "duckduckgo"
   default_lang: "en"
-  ban_time_on_fail: 5
-  max_ban_time_on_fail: 120
   formats:
     - html
     - json
 
 server:
-  port: 10000
-  bind_address: "0.0.0.0"
-  base_url: false
   limiter: false
   public_instance: false
-  secret_key: "${SEARXNG_SECRET}"
   image_proxy: false
-  method: "GET"
 
 outgoing:
   request_timeout: 12.0
   max_request_timeout: 15.0
-  pool_connections: 8
-  pool_maxsize: 4
-  enable_http2: true
-
-ui:
-  default_theme: simple
-
-categories_as_tabs:
-  images:
-  videos:
-  general:
-
-engines:
-  - name: startpage images
-    disabled: false
-    timeout: 12.0
-  - name: youtube
-    disabled: false
-    timeout: 12.0
