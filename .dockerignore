@@ -1,5 +1,7 @@
 *
 
+!settings.yml
+!Dockerfile
 !container/*.template.*
 !container/entrypoint.sh
 !searx/**
