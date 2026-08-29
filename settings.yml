@@ -2,6 +2,7 @@ use_default_settings:
   engines:
     keep_only:
       - startpage images
+      - youtube
 
 general:
   debug: false
@@ -41,9 +42,13 @@ ui:
 
 categories_as_tabs:
   images:
+  videos:
   general:
 
 engines:
   - name: startpage images
     disabled: false
     timeout: 8.0
+  - name: youtube
+    disabled: false
+    timeout: 10.0
