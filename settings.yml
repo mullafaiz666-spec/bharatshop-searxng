@@ -14,8 +14,6 @@ search:
   default_lang: "en"
   ban_time_on_fail: 5
   max_ban_time_on_fail: 120
-  suspended_times:
-    SearxEngineTooManyRequests: 180
   formats:
     - html
     - json
@@ -31,8 +29,8 @@ server:
   method: "GET"
 
 outgoing:
-  request_timeout: 8.0
-  max_request_timeout: 10.0
+  request_timeout: 12.0
+  max_request_timeout: 15.0
   pool_connections: 8
   pool_maxsize: 4
   enable_http2: true
@@ -48,7 +46,7 @@ categories_as_tabs:
 engines:
   - name: startpage images
     disabled: false
-    timeout: 8.0
+    timeout: 12.0
   - name: youtube
     disabled: false
-    timeout: 10.0
+    timeout: 12.0
