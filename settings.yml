@@ -2,7 +2,6 @@ use_default_settings:
   engines:
     keep_only:
       - startpage images
-      - qwant images
 
 general:
   debug: false
@@ -46,8 +45,5 @@ categories_as_tabs:
 
 engines:
   - name: startpage images
-    disabled: false
-    timeout: 8.0
-  - name: qwant images
     disabled: false
     timeout: 8.0
