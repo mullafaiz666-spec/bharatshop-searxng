@@ -1,3 +1,8 @@
+use_default_settings: true
+
+# BharatShop uses SearXNG as its image-search backend. Keep the default
+# engine definitions available, but explicitly enable reliable image engines
+# instead of relying on a hand-written google_images-only configuration.
 general:
   debug: false
   instance_name: "BharatShop Image Search"
@@ -25,7 +30,7 @@ server:
   method: "GET"
 
 outgoing:
-  request_timeout: 8.0
+  request_timeout: 10.0
   pool_connections: 20
   pool_maxsize: 10
   enable_http2: true
@@ -38,11 +43,11 @@ categories_as_tabs:
   general:
 
 engines:
-  - name: google images
-    engine: google_images
-    shortcut: gi
-    categories: [images]
-    paging: true
-    max_page: 10
-    timeout: 8.0
+  - name: bing images
     disabled: false
+    timeout: 8.0
+  - name: startpage images
+    disabled: false
+    timeout: 8.0
+  - name: google images
+    disabled: true
