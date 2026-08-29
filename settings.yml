@@ -1,7 +1,8 @@
+use_default_settings: true
+
 use_default_settings:
   engines:
     keep_only:
-      - qwant
       - startpage images
       - youtube
 
@@ -47,8 +48,6 @@ categories_as_tabs:
   general:
 
 engines:
-  - name: qwant
-    disabled: true
   - name: startpage images
     disabled: false
     timeout: 8.0
